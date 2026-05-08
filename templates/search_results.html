@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results - SmartShop AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .header { text-align: center; color: white; margin-bottom: 40px; }
+        .header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .back-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: white;
+            color: #667eea;
+            border-radius: 10px;
+            text-decoration: none;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .results-count {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .product-card:hover { transform: translateY(-5px); }
+        .card-image { width: 100%; height: 200px; object-fit: cover; }
+        .card-content { padding: 20px; }
+        .card-title { font-size: 1.2rem; font-weight: 700; margin-bottom: 8px; }
+        .card-category {
+            display: inline-block;
+            padding: 3px 10px;
+            background: #f0f0f0;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+        }
+        .card-price { font-size: 1.3rem; font-weight: 700; color: #667eea; }
+        .no-results {
+            text-align: center;
+            padding: 60px;
+            background: white;
+            border-radius: 15px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+       
